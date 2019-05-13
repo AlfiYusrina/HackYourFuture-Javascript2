@@ -49,7 +49,7 @@ function computeEarnings(tasks, hourlyRate) {
   return maartjesTasks.map(task => task.duration)
   .map(durationInMinutes => durationInMinutes/60)
   .filter(durationInHour => durationInHour >= 2)
-  .map(durationInHour => durationInHour * maartjesHourlyRate)
+  .map(durationInHour => durationInHour * hourlyRate)
   .reduce((sum, currentSalary) => sum + currentSalary)
   .toFixed(2);
 }
